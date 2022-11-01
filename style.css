@@ -1,0 +1,113 @@
+:root{
+
+/*Primary*/
+--clr-dark-cyan: hsl(158, 36%, 37%);
+--clr-cream: hsl(30, 38%, 92%);
+
+/*Neutral*/
+--very-dark-blue: hsl(212, 21%, 14%);
+--dark-grayish-blue: hsl(228, 12%, 48%);
+--white: hsl(0, 0%, 100%);
+}
+
+/*RESET*/
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--clr-cream);
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+}
+
+h1,
+h2,
+h3,
+p{
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Utility classes*/
+
+.flow-content > * + * {
+    margin-top: 1rem;
+}
+
+/*General styling*/
+
+.responsive-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    margin-top: 2em;
+    width: 90%;
+    max-width: 90rem; /*1440px*/
+    margin-left:  auto;
+    margin-right: auto;
+    border-radius: 1em;
+    background-color: white;
+    overflow: hidden;
+}
+
+.card__img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text{
+    padding: 1em;
+}
+
+.card__title{
+    color: var(--very-dark-blue);
+}
+
+.card__subtitle{
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.card__price-offer{
+    color: var(--clr-dark-cyan);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card__price-normal{
+    text-decoration: line-through;
+}
+
+.card__btn{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--clr-dark-cyan);
+    padding: 1em 3em;
+    border-radius: 1em;
+}
+
+@media (min-width: 375px){
+    .responsive-flex{
+        flex-direction: row;
+    }
+
+    .card-text{
+        align-self: center;
+    }
+}
