@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
 :root{
 
 /*Primary*/
@@ -18,9 +20,14 @@
 }
 
 body{
-    margin: 0;
-    background-color: var(--clr-cream);
     font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 0.5rem;
+    background-color: var(--clr-cream);
     font-size: 14px;
     color: var(--dark-grayish-blue);
 }
@@ -41,20 +48,20 @@ img{
 /*Utility classes*/
 
 .flow-content > * + * {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
 }
-
-/*General styling*/
 
 .responsive-flex{
     display: flex;
     flex-direction: column;
 }
 
+/*General styling*/
+
 .card{
     margin-top: 2em;
     width: 90%;
-    max-width: 90rem; /*1440px*/
+    max-width: 40rem;
     margin-left:  auto;
     margin-right: auto;
     border-radius: 1em;
@@ -62,13 +69,14 @@ img{
     overflow: hidden;
 }
 
+
 .card__img{
     height: 100%;
     object-fit: cover;
 }
 
 .card-text{
-    padding: 1em;
+    padding: 0.5em;
 }
 
 .card__title{
@@ -86,11 +94,8 @@ img{
     font-weight: 700;
 }
 
-.card__price-normal{
-    text-decoration: line-through;
-}
-
 .card__btn{
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -100,14 +105,20 @@ img{
     background-color: var(--clr-dark-cyan);
     padding: 1em 3em;
     border-radius: 1em;
+    border: none;
 }
 
-@media (min-width: 375px){
+@media (min-width: 500px){
     .responsive-flex{
         flex-direction: row;
     }
 
     .card-text{
         align-self: center;
+        padding: 1.5em;
+    }
+
+    .flow-content > * + * {
+        margin-top: 1.2rem;
     }
 }
